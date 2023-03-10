@@ -69,7 +69,7 @@ export default class DateTimeField extends Component {
       inputValue: typeof this.props.defaultText !== "undefined" ? this.props.defaultText : moment(this.props.dateTime, this.props.format, true).format(this.resolvePropsInputFormat())
   }
 
-  componentWillReceiveProps = (nextProps) => {
+  UNSAFE_componentWillReceiveProps = (nextProps) => {
     let state = {};
     if (nextProps.inputFormat !== this.props.inputFormat) {
         state.inputFormat = nextProps.inputFormat;
