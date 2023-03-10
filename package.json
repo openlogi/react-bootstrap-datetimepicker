@@ -1,5 +1,5 @@
 {
-  "name": "react-bootstrap-datetimepicker",
+  "name": "@openlogi/react-bootstrap-datetimepicker",
   "version": "0.0.22",
   "description": "A bootstrap datetime picker component for React.js",
   "homepage": "http://dev.quri.com/react-bootstrap-datetimepicker/",
@@ -13,6 +13,8 @@
     "build": "NODE_ENV=production webpack --output-file react-bootstrap-datetimepicker.js",
     "build-min": "NODE_ENV=production COMPRESS=1 webpack --output-file react-bootstrap-datetimepicker.min.js",
     "examples": "webpack-dev-server --config ./examples/webpack.config.js",
+    "clean": "rimraf lib",
+    "prepare": "npm run clean && npm run build-npm",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -76,13 +78,15 @@
     "grunt-shell": "~0.6.4",
     "html-webpack-plugin": "^1.1.0",
     "jest-cli": "^0.5.0",
-    "jscodeshift": "^0.7.0",
+    "jscodeshift": "^0.7.1",
     "jsx-loader": "^0.12.2",
+    "prop-types": "^15.8.1",
     "react": "^0.14.2",
     "react-addons-test-utils": "^0.14.2",
-    "react-codemod": "^5.1.1",
+    "react-codemod": "^5.4.3",
     "react-dom": "^0.14.2",
     "requirejs": "~2.1.9",
+    "rimraf": "^4.4.0",
     "webpack": "^1.5.1",
     "webpack-dev-server": "^1.7.0"
   },
