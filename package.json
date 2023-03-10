@@ -13,6 +13,8 @@
     "build": "NODE_ENV=production webpack --output-file react-bootstrap-datetimepicker.js",
     "build-min": "NODE_ENV=production COMPRESS=1 webpack --output-file react-bootstrap-datetimepicker.min.js",
     "examples": "webpack-dev-server --config ./examples/webpack.config.js",
+    "clean": "rimraf dist lib",
+    "prepare": "npm run test && npm run clean && npm run build-npm",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -78,11 +80,13 @@
     "jest-cli": "^0.5.0",
     "jscodeshift": "^0.7.1",
     "jsx-loader": "^0.12.2",
+    "prop-types": "^15.8.1",
     "react": "^0.14.2",
     "react-addons-test-utils": "^0.14.2",
     "react-codemod": "^5.4.3",
     "react-dom": "^0.14.2",
     "requirejs": "~2.1.9",
+    "rimraf": "^4.4.0",
     "webpack": "^1.5.1",
     "webpack-dev-server": "^1.7.0"
   },
